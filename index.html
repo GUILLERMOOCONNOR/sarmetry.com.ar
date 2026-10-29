@@ -217,7 +217,7 @@
   .dark h2,.dark h3{color:var(--sand);}
   .dark .eyebrow{color:var(--aqua-soft);}
   .dark .eyebrow::before{background:var(--aqua-soft);}
-  .industries{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .industries{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .industry{
     border:1px solid var(--line-light);background:rgba(242,245,246,0.03);
     padding:32px;border-radius:var(--radius);
@@ -226,7 +226,7 @@
   .industry .tech-list li{color:rgba(242,245,246,0.86);}
   .industry .tech-list strong{color:var(--aqua-soft);}
   .industry .tech-list li::before{background:var(--copper-light);}
-  @media(max-width:860px){.industries{grid-template-columns:1fr;}}
+  @media(max-width:1000px){.industries{grid-template-columns:1fr;}}
 
   /* Tecnología */
   .tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -419,7 +419,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Alcance por industria</span>
-      <h2>Minería y Oil &amp; Gas.</h2>
+      <h2>Minería, Oil &amp; Gas e infraestructura.</h2>
     </div>
     <div class="industries reveal">
       <div class="industry">
@@ -436,6 +436,14 @@
           <li><strong>Upstream.</strong> Estabilidad geomecánica en campos de extracción y en zonas con inyección o subsidencia asociada a la producción.</li>
           <li><strong>Midstream / Downstream.</strong> Inspección geotécnica de derechos de vía (<em>Right of Way</em>) en corredores de ductos frente a deslizamientos o asentamientos, con SBAS en terrenos naturales.</li>
           <li><strong>Infraestructura de plantas.</strong> Control del asentamiento de fundaciones en tanques, refinerías y terminales de almacenamiento con PS-InSAR.</li>
+        </ul>
+      </div>
+      <div class="industry">
+        <h3>Infraestructura</h3>
+        <ul class="tech-list">
+          <li><strong>Activos lineales.</strong> Inspección automatizada de anomalías en extensos corredores geográficos e infraestructura crítica distribuida.</li>
+          <li><strong>Estructuras y fundaciones.</strong> Control de asentamientos sobre hormigón e infraestructura estable con PS-InSAR.</li>
+          <li><strong>Gemelos digitales del terreno.</strong> Modelos topográficos de alta resolución para la gestión del relieve.</li>
         </ul>
       </div>
     </div>
