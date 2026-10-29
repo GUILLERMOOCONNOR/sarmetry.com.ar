@@ -19,28 +19,29 @@
 <meta name="twitter:description" content="Monitoreo y detección de desplazamientos con InSAR y sensores remotos para minería y Oil & Gas.">
 <meta name="twitter:image" content="https://sarmetry.com.ar/og-sarmetry.png">
 
-<meta name="theme-color" content="#0B1F2A">
-<link rel="icon" type="image/svg+xml" href="logo.svg">
-<link rel="apple-touch-icon" href="og-sarmetry.png">
+<meta name="theme-color" content="#1D2226">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --night:#0B1F2A;
-    --night-2:#12303F;
-    --teal:#0F6B6E;
-    --aqua:#2FB8A6;
-    --aqua-soft:#7FD6C9;
-    --copper:#C8702E;
-    --copper-light:#E39A55;
-    --sand:#F4EFE6;
-    --paper:#FAF8F4;
-    --ink:#1E2B33;
-    --ink-soft:#586873;
-    --line:rgba(11,31,42,0.14);
-    --line-light:rgba(244,239,230,0.16);
-    --radius:3px;
+    --night:#1D2226;
+    --night-2:#262D32;
+    --teal:#11766A;
+    --aqua:#1F9A88;
+    --aqua-soft:#7FE3D4;
+    --copper:#11766A;
+    --copper-light:#2FB8A6;
+    --sand:#F2F5F6;
+    --paper:#F4F7F8;
+    --ink:#1D2226;
+    --ink-soft:#4A5A63;
+    --line:rgba(29,34,38,0.14);
+    --line-light:rgba(242,245,246,0.16);
+    --radius:2px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -54,7 +55,7 @@
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,h4{
-    font-family:'Space Grotesk', sans-serif;
+    font-family:'Montserrat', sans-serif;
     color:var(--night);
     margin:0;
     font-weight:600;
@@ -76,15 +77,15 @@
   /* ---------- Header ---------- */
   header{
     position:sticky;top:0;z-index:50;
-    background:rgba(11,31,42,0.94);
+    background:rgba(29,34,38,0.94);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line-light);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px;}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
-  .brand img{width:34px;height:34px;}
+  .brand img{height:34px;width:auto;}
   .brand-text{
-    font-family:'Space Grotesk', sans-serif;
+    font-family:'Montserrat', sans-serif;
     font-size:16px;font-weight:600;letter-spacing:0.14em;
     color:var(--sand);line-height:1.1;white-space:nowrap;
   }
@@ -131,20 +132,20 @@
     padding:104px 0 92px;
   }
   .fringes{
-    position:absolute;inset:0;pointer-events:none;
-    background:
-      repeating-radial-gradient(circle at 80% 46%,
-        #2a2f8f 0px, #1f6fd0 18px, #2FB8A6 36px, #9bd65a 54px,
-        #f0c24b 72px, #e0743a 90px, #b23a8e 108px, #2a2f8f 126px);
+    position:absolute;pointer-events:none;
+    right:-6%;top:50%;width:min(62vw,820px);aspect-ratio:116/52;
+    transform:translateY(-46%);
+    background:url("hero-hoyo.svg") center/contain no-repeat;
     opacity:0.5;
-    -webkit-mask-image:radial-gradient(ellipse 52% 80% at 80% 46%, #000 8%, transparent 72%);
-            mask-image:radial-gradient(ellipse 52% 80% at 80% 46%, #000 8%, transparent 72%);
+    -webkit-mask-image:radial-gradient(ellipse 60% 70% at 55% 50%, #000 30%, transparent 78%);
+            mask-image:radial-gradient(ellipse 60% 70% at 55% 50%, #000 30%, transparent 78%);
   }
+  @media(max-width:640px){.fringes{width:150vw;right:-55%;top:auto;bottom:-4%;transform:none;opacity:.22;}}
   .hero::after{
     content:"";position:absolute;inset:0;pointer-events:none;
     background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(244,239,230,0.05) 47px, rgba(244,239,230,0.05) 48px),
-      repeating-linear-gradient(90deg, transparent, transparent 71px, rgba(244,239,230,0.05) 71px, rgba(244,239,230,0.05) 72px);
+      repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(242,245,246,0.05) 47px, rgba(242,245,246,0.05) 48px),
+      repeating-linear-gradient(90deg, transparent, transparent 71px, rgba(242,245,246,0.05) 71px, rgba(242,245,246,0.05) 72px);
   }
   .hero-inner{position:relative;z-index:1;}
   .hero-inner > div{max-width:680px;}
@@ -156,7 +157,7 @@
     line-height:1.04;font-weight:700;
   }
   .hero h1 em{font-style:normal;color:var(--copper-light);}
-  .lede{margin:24px 0 0;font-size:18px;color:rgba(244,239,230,0.86);max-width:54ch;}
+  .lede{margin:24px 0 0;font-size:18px;color:rgba(242,245,246,0.86);max-width:54ch;}
   .coord-stamp{
     margin-top:28px;font-family:'JetBrains Mono', monospace;
     font-size:11.5px;letter-spacing:0.12em;color:var(--aqua-soft);
@@ -166,10 +167,10 @@
     display:inline-block;text-decoration:none;font-weight:600;font-size:14.5px;
     padding:13px 24px;border-radius:var(--radius);transition:all .2s ease;
   }
-  .btn-solid{background:var(--copper);color:#fff;border:1px solid var(--copper);}
-  .btn-solid:hover{background:var(--copper-light);border-color:var(--copper-light);}
-  .btn-ghost{color:var(--sand);border:1px solid rgba(244,239,230,0.4);}
-  .btn-ghost:hover{border-color:var(--sand);background:rgba(244,239,230,0.08);}
+  .btn-solid{background:#2FB8A6;color:#1D2226;border:1px solid #2FB8A6;}
+  .btn-solid:hover{background:#4FD3C0;border-color:#4FD3C0;}
+  .btn-ghost{color:var(--sand);border:1px solid rgba(242,245,246,0.4);}
+  .btn-ghost:hover{border-color:var(--sand);background:rgba(242,245,246,0.08);}
 
   /* ---------- Secciones ---------- */
   section.block{padding:96px 0;border-bottom:1px solid var(--line);}
@@ -218,11 +219,11 @@
   .dark .eyebrow::before{background:var(--aqua-soft);}
   .industries{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
   .industry{
-    border:1px solid var(--line-light);background:rgba(244,239,230,0.03);
+    border:1px solid var(--line-light);background:rgba(242,245,246,0.03);
     padding:32px;border-radius:var(--radius);
   }
   .industry h3{font-size:26px;margin-bottom:18px;}
-  .industry .tech-list li{color:rgba(244,239,230,0.86);}
+  .industry .tech-list li{color:rgba(242,245,246,0.86);}
   .industry .tech-list strong{color:var(--aqua-soft);}
   .industry .tech-list li::before{background:var(--copper-light);}
   @media(max-width:860px){.industries{grid-template-columns:1fr;}}
@@ -244,7 +245,7 @@
   @media(max-width:860px){.tech-grid{grid-template-columns:1fr;}}
 
   /* Impacto */
-  .impact{background:var(--sand);}
+  .impact{background:#E6EDEF;}
   .impact-list{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
   .impact-item .k{
     font-family:'JetBrains Mono', monospace;font-size:12px;letter-spacing:0.1em;
@@ -261,30 +262,30 @@
     display:flex;justify-content:space-between;align-items:center;gap:16px;
     padding:22px 26px;text-decoration:none;
     border:1px solid var(--line-light);border-radius:var(--radius);
-    background:rgba(244,239,230,0.04);transition:all .2s ease;
+    background:rgba(242,245,246,0.04);transition:all .2s ease;
   }
-  .contact-card:hover{border-color:var(--aqua-soft);background:rgba(244,239,230,0.08);}
+  .contact-card:hover{border-color:var(--aqua-soft);background:rgba(242,245,246,0.08);}
   .contact-card .label{
     display:block;font-family:'JetBrains Mono', monospace;font-size:11px;
     letter-spacing:0.12em;color:var(--aqua-soft);text-transform:uppercase;margin-bottom:4px;
   }
-  .contact-card .value{font-family:'Space Grotesk', sans-serif;font-size:19px;color:var(--sand);}
+  .contact-card .value{font-family:'Montserrat', sans-serif;font-size:19px;color:var(--sand);}
   .contact-card .arrow{font-size:20px;color:var(--sand);transition:transform .2s ease;}
   .contact-card:hover .arrow{transform:translateX(6px);color:var(--copper-light);}
   .contact-card.pending{cursor:default;}
-  .contact-card.pending:hover{border-color:var(--line-light);background:rgba(244,239,230,0.04);}
-  .contact-card.pending .value{color:rgba(244,239,230,0.55);}
-  .dark p.sub{color:rgba(244,239,230,0.78);max-width:40ch;margin:16px 0 0;}
+  .contact-card.pending:hover{border-color:var(--line-light);background:rgba(242,245,246,0.04);}
+  .contact-card.pending .value{color:rgba(242,245,246,0.55);}
+  .dark p.sub{color:rgba(242,245,246,0.78);max-width:40ch;margin:16px 0 0;}
   @media(max-width:800px){.contact-wrap{grid-template-columns:1fr;gap:36px;}}
 
   /* Footer */
   footer{background:var(--night);border-top:1px solid var(--line-light);padding:36px 0;color:var(--sand);}
   .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-  .footer-inner .brand img{width:26px;height:26px;}
+  .footer-inner .brand img{height:34px;}
   .footer-inner .brand-text{font-size:13px;}
   .footer-note{
     font-family:'JetBrains Mono', monospace;font-size:11px;
-    color:rgba(244,239,230,0.6);letter-spacing:0.04em;
+    color:rgba(242,245,246,0.6);letter-spacing:0.04em;
   }
 
   /* Reveal */
@@ -301,8 +302,7 @@
 <header>
   <div class="wrap nav">
     <a href="#inicio" class="brand">
-      <img src="logo.svg" alt="Sarmetry">
-      <span class="brand-text">SARMETRY<span>INSAR · TELEDETECCIÓN</span></span>
+      <img src="logo-principal.svg" alt="Sarmetry" width="142" height="34">
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -524,8 +524,7 @@
 <footer>
   <div class="wrap footer-inner">
     <a href="#inicio" class="brand">
-      <img src="logo.svg" alt="Sarmetry">
-      <span class="brand-text">SARMETRY</span>
+      <img src="logo-principal.svg" alt="Sarmetry" width="142" height="34">
     </a>
     <span class="footer-note">© 2026 SARMETRY.COM.AR — INTERFEROMETRÍA Y TELEDETECCIÓN APLICADA</span>
   </div>
