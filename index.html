@@ -182,7 +182,12 @@
   .section-head h2{font-size:clamp(28px, 3.6vw, 42px);line-height:1.12;}
   .intro-text{font-size:18px;max-width:70ch;color:var(--ink);margin:0 0 40px;}
   .intro-text strong{color:var(--night);}
-  .intro-text + .intro-text{margin-top:-18px;}
+  .about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0 0 40px;}
+  .about-item{border-top:2px solid var(--night);padding-top:14px;}
+  .about-tag{display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
+  .about-item p{margin:0;color:var(--ink-soft);font-size:16px;}
+  .about-item strong{color:var(--night);}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:20px;}}
 
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .pillar{
@@ -348,15 +353,20 @@
       <span class="eyebrow">Quiénes somos</span>
       <h2>Tecnología geoespacial para prevenir riesgos.</h2>
     </div>
-    <p class="intro-text reveal">
-      <strong>Sarmetry</strong> es una empresa de tecnología geoespacial aplicada y sensores remotos. Trabajamos para reducir riesgos estructurales, resguardar la estabilidad geomecánica y mejorar la eficiencia operativa en minería, infraestructura y Oil &amp; Gas.
-    </p>
-    <p class="intro-text reveal">
-      Somos un equipo con más de 10 años de experiencia en obras civiles, minería y Oil &amp; Gas. Trabajamos tanto en terreno como en el procesamiento de los datos que respaldan las decisiones de cada proyecto.
-    </p>
-    <p class="intro-text reveal">
-      A nuestra formación de grado sumamos posgrados y capacitaciones en información satelital. Esa combinación nos permite atender a industrias donde el dato se relaciona estrechamente con fenómenos geológicos y antrópicos, y entender qué dato necesita cada actividad —minería, infraestructura u Oil &amp; Gas— y cómo le resulta útil.
-    </p>
+    <div class="about-grid reveal">
+      <div class="about-item">
+        <span class="about-tag">Qué hacemos</span>
+        <p><strong>Sarmetry</strong> aplica tecnología geoespacial y sensores remotos para reducir riesgos estructurales, resguardar la estabilidad geomecánica y mejorar la eficiencia operativa.</p>
+      </div>
+      <div class="about-item">
+        <span class="about-tag">Experiencia</span>
+        <p>Un equipo con más de 10 años en obras civiles, minería y Oil &amp; Gas, en terreno y en el procesamiento de los datos que respaldan las decisiones de cada proyecto.</p>
+      </div>
+      <div class="about-item">
+        <span class="about-tag">Formación</span>
+        <p>Grado, posgrados y capacitaciones en información satelital. Entendemos qué dato necesita cada actividad —minería, infraestructura u Oil &amp; Gas— y cómo le resulta útil.</p>
+      </div>
+    </div>
     <div class="pillars reveal">
       <div class="pillar">
         <h3>Monitoreo geomecánico de precisión</h3>
